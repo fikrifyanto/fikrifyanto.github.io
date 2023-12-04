@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/fikrifyanto.github.io",
-  assetPrefix: "/fikrifyanto.github.io",
+  basePath: "https://fikrifyanto.github.io/",
+  assetPrefix: "https://fikrifyanto.github.io/",
   output: "export",
   distDir: "dist",
 }
