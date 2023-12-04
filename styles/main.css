@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slideBanner {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-300%);
+  }
+  80% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@layer components {
+  .animate-draw {
+    stroke-linecap: round;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: draw 3s linear forwards;
+    animation-delay: 1.5s;
+  }
+
+  .banner {
+    display: inline-block;
+    width: 100%;
+    animation: slideBanner 30s linear infinite; /* Sesuaikan durasi animasi */
+  }
+
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}
