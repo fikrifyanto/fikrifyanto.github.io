@@ -148,7 +148,9 @@ export default function Home() {
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-4xl">Send Your Waste.</h2>
+                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
+                  Send Your Waste.
+                </h2>
                 <p className="text-lg text-slate-200 text-left mt-4">
                   A web app for individual reponsible waste management collection in Indonesia.
                 </p>
@@ -242,7 +244,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-3xl md:text-7xl">
+                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
                   Waste4Change.
                 </h2>
                 <p className="text-sm md:text-lg text-slate-200 text-left mt-4">
@@ -357,7 +359,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-3xl md:text-7xl">
+                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
                   Blog4Change.
                 </h2>
                 <p className="text-lg text-slate-200 text-left mt-4">
@@ -462,7 +464,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-3xl md:text-7xl">
+                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
                   JDIH Sumedang.
                 </h2>
                 <p className="text-lg text-slate-200 text-left mt-4">
