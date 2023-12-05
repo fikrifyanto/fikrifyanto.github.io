@@ -399,7 +399,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 mt-10 md:mt-20 md:ml-44 group">
               <Image
                 className="rounded-lg shadow-xl transition-all ml-auto md:ml-0 md:group-hover:rotate-0 md:-rotate-12 md:group-hover:-ml-20"
-                src={require("../images/waste4change/1.png")}
+                src={require("../images/blog4change/1.png")}
                 width={300}
                 height={100}
                 alt="Blog4Change"
