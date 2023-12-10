@@ -67,18 +67,26 @@ export default function Home() {
 
     const banners = document.querySelectorAll(".banner")
 
-    banners.forEach((banner) => {
-      banner.addEventListener("mouseenter", function () {
+    let isBannerActive = false
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500 && !isBannerActive) {
         banners.forEach((banner) => {
-          banner.classList.add("pause-animation")
-        })
-      })
+          banner.classList.add("banner-active")
+          banner.addEventListener("mouseenter", function () {
+            banners.forEach((banner) => {
+              banner.classList.add("pause-animation")
+            })
+          })
 
-      banner.addEventListener("mouseleave", function () {
-        banners.forEach((banner) => {
-          banner.classList.remove("pause-animation")
+          banner.addEventListener("mouseleave", function () {
+            banners.forEach((banner) => {
+              banner.classList.remove("pause-animation")
+            })
+          })
         })
-      })
+
+        isBannerActive = true
+      }
     })
   }, [])
 

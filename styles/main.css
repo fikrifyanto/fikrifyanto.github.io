@@ -38,7 +38,7 @@
     animation-delay: 1.5s;
   }
 
-  .banner {
+  .banner-active {
     display: inline-block;
     width: 100%;
     animation: slideBanner 30s linear infinite; /* Sesuaikan durasi animasi */
