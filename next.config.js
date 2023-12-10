@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: process.env.ENVIRONMENT == "local" ? "" : process.env.ENVIRONMENT,
-  assetPrefix: process.env.ENVIRONMENT == "local" ? "" : process.env.ENVIRONMENT,
-  output: process.env.ENVIRONMENT == "local" ? "standalone" : process.env.ENVIRONMENT,
+  basePath: process.env.ENVIRONMENT == "local" ? "" : process.env.URL,
+  assetPrefix: process.env.ENVIRONMENT == "local" ? "" : process.env.URL,
+  output: process.env.ENVIRONMENT == "local" ? "standalone" : "export",
   distDir: "dist",
 }
 
