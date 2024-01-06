@@ -63,7 +63,7 @@ export default function Contact() {
             </svg>
           </a>
           <a
-            href="https://drive.google.com/file/d/1ihOcY9qo0vSrkoLrQJlbZ6bOBr4iLwqe/view?usp=sharing"
+            href="https://docs.google.com/document/d/1sz1f7SO1BhioIDGIV5ase-OHLNeKLM-QYXKOuCyZxGE/edit?usp=sharing"
             target="_blank"
             className="bg-white/20 h-12 px-4 flex items-center gap-2 justify-center rounded-full text-slate-200 transition hover:bg-lime-900/30 font-gt">
             Download CV
