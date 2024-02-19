@@ -17,7 +17,6 @@ export default function Header() {
       const listRect = list?.getBoundingClientRect()
 
       if (backdrop) {
-        console.log(listRect)
         backdrop.style.width = listRect?.width + "px"
         backdrop.style.height = listRect?.height + "px"
       }
@@ -85,17 +84,17 @@ export default function Header() {
         <nav className="flex items-center justify-center">
           <ul className="rounded-full md:gap-4 font-gt flex items-center justify-center text-sm md:text-lg px-4 py-3 text-slate-200">
             <li>
-              <button onClick={setActive} data-route="/" className="px-4 md:px-6 py-1 active">
-                Work
-              </button>
-            </li>
-            <li>
-              <button onClick={setActive} data-route="/about" className="px-4 md:px-6 py-1">
+              <button onClick={setActive} data-route="#about" className="px-4 md:px-6 py-1 active">
                 About
               </button>
             </li>
             <li>
-              <button onClick={setActive} data-route="/contact" className="px-4 md:px-6 py-1">
+              <button onClick={setActive} data-route="#work" className="px-4 md:px-6 py-1">
+                Work
+              </button>
+            </li>
+            <li>
+              <button onClick={setActive} data-route="#contact" className="px-4 md:px-6 py-1">
                 Contact
               </button>
             </li>

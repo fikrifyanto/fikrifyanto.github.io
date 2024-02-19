@@ -91,8 +91,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
-      <div className="bg-gradient-to-b from-teal-700 to-blue-600 h-screen w-screen flex items-center justify-center relative">
+    <>
+      <div
+        id="about"
+        className="bg-gradient-to-b from-teal-700 to-blue-600 h-screen w-screen flex items-center justify-center relative">
         <div
           id="aurora-1"
           className="absolute transition-all duration-[4000ms] bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 opacity-80 h-96 w-96 rounded-full -left-40 -top-40 scale-[2] blur-3xl z-10"></div>
@@ -140,63 +142,144 @@ export default function Home() {
               <span className="text-3xl md:text-7xl font-acorn text-transparent text-stroke-slate-200 text-stroke-2 relative">
                 Hi, I&apos;m Fikri.
               </span>
-              <span className="text-3xl md:text-7xl font-acorn text-slate-200 ml-4">
-                Call Me Pik!
-              </span>
+              <span className="text-3xl md:text-7xl font-acorn text-white ml-4">Call Me Pik!</span>
             </h1>
-            <p className="font-gt text-slate-200 mt-6 text-sm md:text-xl">
+            <p className="font-gt text-white mt-6 text-sm md:text-xl px-8">
               I&apos;m passionate about crafting experiences that are engaging, accessible, and
               user-centric.
             </p>
           </div>
         </div>
       </div>
+      <div className="max-w-4xl mx-auto min-h-screen px-8 py-20 md:py-40 flex flex-col lg:flex-row justify-center gap-10 text-white">
+        <div className="flex flex-col gap-4 px-16">
+          <Image
+            className="rounded-full mx-auto"
+            src={require("@/images/profile.jpeg")}
+            alt="Profile Page"
+            width={200}
+            height={200}
+          />
+          <a
+            target="_blank"
+            href="https://drive.google.com/drive/folders/1SxfyVK_mW8wV8VtyDNgt1eMuy-JjvWon?usp=drive_link"
+            className="flex items-center gap-2 justify-center px-4 rounded-full py-2 font-gt bg-white/20 hover:bg-lime-900/30 mt-4">
+            14 Certificates
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1ihOcY9qo0vSrkoLrQJlbZ6bOBr4iLwqe/view?usp=sharing"
+            target="_blank"
+            className="bg-white/20 py-2 px-4 flex items-center gap-2 justify-center rounded-full text-white transition hover:bg-lime-900/30 font-gt">
+            Download CV
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+          </a>
+        </div>
+        <div>
+          <h2 className="text-4xl md:text-7xl font-acorn text-center lg:text-left">Experience</h2>
+          <div className="flex flex-col gap-8 lg:gap-14 mt-14">
+            <div className="flex items-start gap-4">
+              <Image
+                src={require("@/images/waste4change.jpeg")}
+                alt="Waste4Change Logo"
+                className="rounded-full"
+                width={40}
+                height={40}
+              />
+              <div>
+                <h3 className="text-xl font-acorn">Fullstack Engineer</h3>
+                <div className="font-gt mt-1">Waste4Change</div>
+                <div className="font-gt">Oct 2021 - Present · 2 yrs 5 mos</div>
+                <div className="font-gt">Semarang, Central Java, Indonesia · Remote</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Image
+                src={require("@/images/naetalab.jpeg")}
+                alt="Waste4Change Logo"
+                className="rounded-full"
+                width={40}
+                height={40}
+              />
+              <div>
+                <h3 className="text-xl font-acorn">Junior Developer</h3>
+                <div className="font-gt">CV. Naetalab Teknologi</div>
+                <div className="font-gt">Jun 2020 - Sep 2021 · 1 yr 4 mos</div>
+                <div className="font-gt">Sumedang, West Java, Indonesia · On-site</div>
+                <h3 className="text-xl font-acorn mt-8 lg:mt-14">Freelance</h3>
+                <div className="font-gt">Jun 2019 - Present · 4 yrs 9 mos</div>
+                <div className="font-gt">Remote</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="bg-gradient-to-b from-blue-600 via-indigo-500 to-teal-500">
-        <div className="px-4 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
+        <div id="work" className="px-8 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
+                <h2 className="text-left font-acorn text-white text-4xl md:text-7xl">
                   Send Your Waste.
                 </h2>
-                <p className="text-lg text-slate-200 text-left mt-4">
+                <p className="text-lg text-white text-left mt-4">
                   A web app for individual reponsible waste management collection in Indonesia.
                 </p>
               </div>
-              <div>
-                <button>
-                  <a
-                    href="https://app.waste4change.com"
-                    target="_blank"
-                    className="flex justify-between text-white font-semibold font-gt gap-2 mt-8 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
-                    Launch
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </a>
-                </button>
+              <div className="flex lg:block gap-2 flex-wrap">
+                <a
+                  href="https://app.waste4change.com"
+                  target="_blank"
+                  className="flex justify-betwee text-white font-semibold font-gt gap-2 mt-8 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
+                  Launch
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
             <div className="flex flex-wrap gap-3 mt-4">
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">Web</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">Nuxt</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">Vue</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Web</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Nuxt</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Vue</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 TailwindCSS
               </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
-                Laravel
-              </div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Laravel</div>
             </div>
             <div className="flex flex-col md:flex-row gap-6 mt-10 md:mt-5 md:ml-72 group">
               <Image
@@ -254,54 +337,50 @@ export default function Home() {
             })()}
           </div>
         </div>
-        <div className="px-4 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
+        <div className="px-8 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
+                <h2 className="text-left font-acorn text-white text-4xl md:text-7xl">
                   Waste4Change.
                 </h2>
-                <p className="text-sm md:text-lg text-slate-200 text-left mt-4">
+                <p className="text-sm md:text-lg text-white text-left mt-4">
                   Beautiful website for portoflio, achievement, project showcase, publication file
                   and many things information about Waste4change a Startup Environment in Indonesia.
                 </p>
               </div>
-              <div>
-                <button>
-                  <a
-                    href="https://waste4change.com"
-                    target="_blank"
-                    className="flex justify-between text-white font-semibold font-gt gap-2 mt-8 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
-                    Launch
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </a>
-                </button>
+              <div className="flex lg:block gap-2 flex-wrap">
+                <a
+                  href="https://waste4change.com"
+                  target="_blank"
+                  className="flex justify-between text-white font-semibold font-gt gap-2 mt-8 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
+                  Launch
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
             <div className="flex flex-wrap gap-3 mt-4">
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">Web</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Web</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 Codeigniter
               </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
-                AlpineJS
-              </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">AlpineJS</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 TailwindCSS
               </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 Javascript
               </div>
             </div>
@@ -376,44 +455,49 @@ export default function Home() {
             })()}
           </div>
         </div>
-        <div className="px-4 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
+        <div className="px-8 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
+                <h2 className="text-left font-acorn text-white text-4xl md:text-7xl">
                   Blog4Change.
                 </h2>
-                <p className="text-lg text-slate-200 text-left mt-4">
+                <p className="text-lg text-white text-left mt-4">
                   Georgeous and informative Blog about environment.
                 </p>
               </div>
-              <div>
-                <button className="flex justify-between text-white font-semibold font-gt gap-2 mt-8 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
-                  On Progress
+              <div className="flex lg:block gap-2 flex-wrap">
+                <a
+                  href="https://waste4change.com/blog"
+                  target="_blank"
+                  className="flex justify-between text-white font-semibold font-gt gap-2 mt-8 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
+                  Launch
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
                     className="w-6 h-6">
                     <path
-                      fillRule="evenodd"
-                      d="M10.5 3.798v5.02a3 3 0 01-.879 2.121l-2.377 2.377a9.845 9.845 0 015.091 1.013 8.315 8.315 0 005.713.636l.285-.071-3.954-3.955a3 3 0 01-.879-2.121v-5.02a23.614 23.614 0 00-3 0zm4.5.138a.75.75 0 00.093-1.495A24.837 24.837 0 0012 2.25a25.048 25.048 0 00-3.093.191A.75.75 0 009 3.936v4.882a1.5 1.5 0 01-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0115 8.818V3.936z"
-                      clipRule="evenodd"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
             <div className="flex flex-wrap gap-3 mt-4">
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">Web</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Web</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 Wordpress Custom Theme
               </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">PHP</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">PHP</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 TailwindCSS
               </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 Javascript
               </div>
             </div>
@@ -488,80 +572,68 @@ export default function Home() {
             })()}
           </div>
         </div>
-        <div className="px-4 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
+        <div className="px-8 md:h-screen py-20 md:py-40 relative overflow-y-hidden">
           <div className="max-w-4xl mx-auto -mt-4">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h2 className="text-left font-acorn text-slate-200 text-4xl md:text-7xl">
+                <h2 className="text-left font-acorn text-white text-4xl md:text-7xl">
                   JDIH Sumedang.
                 </h2>
-                <p className="text-lg text-slate-200 text-left mt-4">
+                <p className="text-lg text-white text-left mt-4">
                   Useful mobile app and website for find document and legal information of
                   government in Sumedang one of regency in Indonesia.
                 </p>
               </div>
-              <div className="flex flex-wrap mt-8">
-                <button>
-                  <a
-                    href="https://app.waste4change.com"
-                    target="_blank"
-                    className="flex justify-between text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
-                    Launch
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </a>
-                </button>
-                <button>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.sumedang.jdih&pli=1"
-                    target="_blank"
-                    className="flex justify-between text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 py-2 px-6 rounded-full">
-                    See On Play Store
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-6 h-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </a>
-                </button>
+              <div className="flex gap-2 flex-wrap mt-8">
+                <a
+                  href="https://app.waste4change.com"
+                  target="_blank"
+                  className="flex justify-between items-center text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 lg:h-11 px-6 rounded-full">
+                  Launch
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.sumedang.jdih&pli=1"
+                  target="_blank"
+                  className="flex justify-between items-center text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 lg:h-11 px-6 rounded-full">
+                  See On Play Store
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
             <div className="flex flex-wrap gap-3 mt-4">
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">Web</div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
-                Mobile
-              </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Web</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Mobile</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">
                 React Native
               </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
-                Laravel
-              </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
-                jQuery
-              </div>
-              <div className="rounded-full px-4 text-slate-200 border-2 border-white/50">
-                Bootstrap
-              </div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Laravel</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">jQuery</div>
+              <div className="rounded-full px-4 text-white border-2 border-white/50">Bootstrap</div>
             </div>
             <div className="flex flex-col gap-6 mt-10 md:mt-20 md:ml-44 group">
               <Image
@@ -634,22 +706,22 @@ export default function Home() {
             })()}
           </div>
         </div>
-        <div className="relative h-screen w-screen flex items-center justify-center">
+        <div id="contact" className="relative h-screen w-screen flex items-center justify-center">
           <div>
-            <p className="text-center md:text-left font-gt text-xl text-slate-200">
+            <p className="text-center md:text-left font-gt text-xl text-white">
               I also worked on 12 another closed projects
             </p>
-            <h2 className="text-center md:text-left font-acorn text-slate-200 text-3xl md:text-7xl">
+            <h2 className="text-center md:text-left font-acorn text-white text-3xl md:text-7xl">
               Interesting with me?
             </h2>
-            <p className="text-center md:text-left font-gt text-xl text-slate-200">
+            <p className="text-center md:text-left font-gt text-xl text-white">
               Feel free to contacting me!
             </p>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-4">
               <a
                 href="https://www.linkedin.com/in/fikrifyanto/"
                 target="_blank"
-                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-slate-200 transition hover:bg-lime-900/30">
+                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-white transition hover:bg-lime-900/30">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -661,7 +733,7 @@ export default function Home() {
               <a
                 href="https://www.instagram.com/fikripik_/"
                 target="_blank"
-                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-slate-200 transition hover:bg-lime-900/30">
+                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-white transition hover:bg-lime-900/30">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -673,7 +745,7 @@ export default function Home() {
               <a
                 href="https://github.com/fikrifyanto"
                 target="_blank"
-                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-slate-200 transition hover:bg-lime-900/30">
+                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-white transition hover:bg-lime-900/30">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -684,7 +756,7 @@ export default function Home() {
               </a>
               <a
                 href="mailto:fikrifyanto@gmail.com"
-                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-slate-200 transition hover:bg-lime-900/30">
+                className="bg-white/20 h-12 w-12 flex items-center justify-center rounded-full text-white transition hover:bg-lime-900/30">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -702,7 +774,7 @@ export default function Home() {
               <a
                 href="https://drive.google.com/file/d/1ihOcY9qo0vSrkoLrQJlbZ6bOBr4iLwqe/view?usp=sharing"
                 target="_blank"
-                className="bg-white/20 h-12 px-4 flex items-center gap-2 justify-center rounded-full text-slate-200 transition hover:bg-lime-900/30 font-gt">
+                className="bg-white/20 h-12 px-4 flex items-center gap-2 justify-center rounded-full text-white transition hover:bg-lime-900/30 font-gt">
                 Download CV
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -720,11 +792,11 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="absolute bottom-0 inset-x-0 flex items-end justify-center pb-4 text-slate-200">
+          <div className="absolute bottom-0 inset-x-0 flex items-end justify-center pb-4 text-white">
             <h3>© 2023 Fikri Fri Yanto</h3>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
