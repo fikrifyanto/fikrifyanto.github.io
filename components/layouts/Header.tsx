@@ -95,11 +95,6 @@ export default function Header() {
               </button>
             </li>
             <li>
-              <button onClick={setActive} data-route="/notes" className="px-4 md:px-6 py-1">
-                Notes
-              </button>
-            </li>
-            <li>
               <button onClick={setActive} data-route="/contact" className="px-4 md:px-6 py-1">
                 Contact
               </button>
