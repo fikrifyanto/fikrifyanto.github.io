@@ -53,11 +53,13 @@ export default function Header() {
 
     if (links) {
       for (var i = 0; i < links.length; i++) {
-        const route = links[i].getAttribute("href")
-        if (route == window.location.hash) {
-          links[i].classList.add("active")
-        } else {
-          links[i].classList.remove("active")
+        if (window.location.hash) {
+          const route = links[i].getAttribute("href")
+          if (route == window.location.hash) {
+            links[i].classList.add("active")
+          } else {
+            links[i].classList.remove("active")
+          }
         }
       }
     }
