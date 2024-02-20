@@ -627,7 +627,7 @@ export default function Home() {
                 <a
                   href="https://play.google.com/store/apps/details?id=com.sumedang.jdih&pli=1"
                   target="_blank"
-                  className="flex justify-between items-center text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 lg:h-11 px-6 rounded-full">
+                  className="flex justify-between items-center text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 py-2 lg:py-0 lg:h-11 px-6 rounded-full">
                   See On Play Store
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
