@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import Image from "next/image"
+import { CldImage } from "next-cloudinary"
 
 export default function Home() {
   useEffect(() => {
@@ -153,12 +153,13 @@ export default function Home() {
       </div>
       <div className="max-w-4xl mx-auto min-h-screen px-8 py-20 md:py-40 flex flex-col lg:flex-row justify-center gap-10 text-white">
         <div className="flex flex-col gap-4 px-16">
-          <Image
+          <CldImage
             className="rounded-full mx-auto"
-            src={require("@/images/profile.jpeg")}
+            src="images/profile.webp"
             alt="Profile Page"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
+            style={{ width: 200, height: 200 }}
           />
           <a
             target="_blank"
@@ -203,8 +204,8 @@ export default function Home() {
           <h2 className="text-4xl md:text-7xl font-acorn text-center lg:text-left">Experience</h2>
           <div className="flex flex-col gap-8 lg:gap-14 mt-14">
             <div className="flex items-start gap-4">
-              <Image
-                src={require("@/images/waste4change.jpeg")}
+              <CldImage
+                src="images/waste4change.webp"
                 alt="Waste4Change Logo"
                 className="rounded-full"
                 width={40}
@@ -218,8 +219,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <Image
-                src={require("@/images/naetalab.jpeg")}
+              <CldImage
+                src="images/naetalab.webp"
                 alt="Waste4Change Logo"
                 className="rounded-full"
                 width={40}
@@ -282,37 +283,41 @@ export default function Home() {
               <div className="rounded-full px-4 text-white border-2 border-white/50">Laravel</div>
             </div>
             <div className="flex flex-col md:flex-row gap-6 mt-10 md:mt-5 md:ml-72 group">
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition md:-mr-10 md:mt-10 md:-rotate-12 group-hover:rotate-0"
-                src={require("../images/sendyourwaste/1.png")}
-                width={180}
-                height={380}
+                src="images/sendyourwaste/1.webp"
+                width={400}
+                height={600}
+                style={{ width: 180, height: 380 }}
                 sizes="180"
                 alt="Sendyourwaste"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition -mt-80 ml-auto mr-8 md:mt-0 md:-mr-10 md:mb-10 md:translate-y-6 group-hover:translate-y-0"
-                src={require("../images/sendyourwaste/2.png")}
-                width={180}
-                height={380}
+                src="images/sendyourwaste/2.webp"
+                width={400}
+                height={600}
+                style={{ width: 180, height: 380 }}
                 alt="Sendyourwaste"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition -mt-80 ml-4 md:-mr-10 md:mt-10 md:-translate-y-10 group-hover:translate-y-0"
-                src={require("../images/sendyourwaste/3.png")}
-                width={180}
-                height={380}
+                src="images/sendyourwaste/3.webp"
+                width={400}
+                height={600}
+                style={{ width: 180, height: 380 }}
                 alt="Sendyourwaste"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition ml-auto mr-14 -mt-72 md:mt-0 md:-mr-10 md:mb-10 md:rotate-12 group-hover:rotate-0"
-                src={require("../images/sendyourwaste/4.png")}
-                width={180}
-                height={380}
+                src="images/sendyourwaste/4.webp"
+                width={400}
+                height={600}
+                style={{ width: 180, height: 380 }}
                 alt="Sendyourwaste"
               />
             </div>
@@ -322,13 +327,14 @@ export default function Home() {
               const images = []
               for (let i = 5; i <= 11; i++) {
                 images.push(
-                  <Image
+                  <CldImage
                     loading="lazy"
                     key={i}
                     className="rounded-xl banner"
-                    src={require(`../images/sendyourwaste/${i}.png`)}
-                    width={300}
-                    height={600}
+                    src={`images/sendyourwaste/${i}.webp`}
+                    width={700}
+                    height={1000}
+                    style={{ width: 300, height: 600 }}
                     alt={`Sendyourwaste Screenshot ${i + 1}`}
                   />
                 )
@@ -385,52 +391,58 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col gap-6 mt-10 md:mt-20 md:ml-44 group">
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto md:ml-0 md:group-hover:rotate-0 md:-rotate-12 md:group-hover:-ml-20"
-                src={require("../images/waste4change/1.png")}
-                width={300}
-                height={100}
+                src="images/waste4change/1.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="Waste4change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all mr-auto -mt-20 md:group-hover:-mt-44 md:group-hover:rotate-0 md:ml-40 md:rotate-12 md:-mt-32"
-                src={require("../images/waste4change/2.png")}
-                width={300}
-                height={100}
+                src="images/waste4change/2.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="Waste4change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto -mt-20 md:group-hover:-mt-52 md:group-hover:rotate-0 md:rotate-12 md:ml-80 md:-mt-72"
-                src={require("../images/waste4change/3.png")}
-                width={300}
-                height={100}
+                src="images/waste4change/3.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="Waste4change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto -mt-40 md:-mt-32 md:ml-auto md:-rotate-12 md:group-hover:rotate-0"
-                src={require("../images/waste4change/mobile-2.png")}
-                width={100}
-                height={300}
+                src="images/waste4change/mobile-2.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="Waste4change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto mr-8 -mt-40 md:-mt-96 md:ml-auto md:-mr-20 md:rotate-12 md:group-hover:rotate-0"
-                src={require("../images/waste4change/mobile-1.png")}
-                width={100}
-                height={300}
+                src="images/waste4change/mobile-1.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="Waste4change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="md:hidden rounded-lg shadow-xl transition-all ml-auto mr-16 -mt-40 md:-mt-96 md:ml-auto md:-mr-20 md:rotate-12 md:group-hover:rotate-0"
-                src={require("../images/waste4change/mobile-3.png")}
-                width={100}
-                height={300}
+                src="images/waste4change/mobile-3.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="Waste4change"
               />
             </div>
@@ -440,13 +452,14 @@ export default function Home() {
               const images = []
               for (let i = 1; i <= 7; i++) {
                 images.push(
-                  <Image
+                  <CldImage
                     loading="lazy"
                     key={i}
                     className="rounded-xl banner"
-                    src={require(`../images/waste4change/mobile-${i}.png`)}
-                    width={300}
-                    height={600}
+                    src={`images/waste4change/mobile-${i}.webp`}
+                    width={700}
+                    height={1000}
+                    style={{ width: 300, height: 600 }}
                     alt={`Waste4change Mobile Screenshot ${i + 1}`}
                   />
                 )
@@ -502,52 +515,58 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col gap-6 mt-10 md:mt-20 md:ml-44 group">
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto md:ml-0 md:group-hover:rotate-0 md:-rotate-12 md:group-hover:-ml-20"
-                src={require("../images/blog4change/1.png")}
-                width={300}
-                height={100}
+                src="images/blog4change/1.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="Blog4Change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all mr-auto -mt-20 md:group-hover:-mt-44 md:group-hover:rotate-0 md:ml-40 md:rotate-12 md:-mt-32"
-                src={require("../images/blog4change/2.png")}
-                width={300}
-                height={100}
+                src="images/blog4change/2.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="Blog4Change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto -mt-20 md:group-hover:-mt-52 md:group-hover:rotate-0 md:rotate-12 md:ml-80 md:-mt-72"
-                src={require("../images/blog4change/3.png")}
-                width={300}
-                height={100}
+                src="images/blog4change/3.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="Blog4Change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto -mt-40 md:-mt-32 md:ml-auto md:-rotate-12 md:group-hover:rotate-0"
-                src={require("../images/blog4change/mobile-2.png")}
-                width={100}
-                height={300}
+                src="images/blog4change/mobile-2.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="Blog4Change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto mr-8 -mt-40 md:-mt-96 md:ml-auto md:-mr-20 md:rotate-12 md:group-hover:rotate-0"
-                src={require("../images/blog4change/mobile-1.png")}
-                width={100}
-                height={300}
+                src="images/blog4change/mobile-1.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="Blog4Change"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="md:hidden rounded-lg shadow-xl transition-all ml-auto mr-16 -mt-40 md:-mt-96 md:ml-auto md:-mr-20 md:rotate-12 md:group-hover:rotate-0"
-                src={require("../images/blog4change/mobile-3.png")}
-                width={100}
-                height={300}
+                src="images/blog4change/mobile-3.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="Blog4Change"
               />
             </div>
@@ -557,13 +576,14 @@ export default function Home() {
               const images = []
               for (let i = 1; i <= 7; i++) {
                 images.push(
-                  <Image
+                  <CldImage
                     loading="lazy"
                     key={i}
                     className="rounded-xl banner"
-                    src={require(`../images/blog4change/mobile-${i}.png`)}
-                    width={300}
-                    height={600}
+                    src={`images/blog4change/mobile-${i}.webp`}
+                    width={700}
+                    height={1000}
+                    style={{ width: 300, height: 600 }}
                     alt={`Blog4change Screenshot ${i + 1}`}
                   />
                 )
@@ -636,52 +656,58 @@ export default function Home() {
               <div className="rounded-full px-4 text-white border-2 border-white/50">Bootstrap</div>
             </div>
             <div className="flex flex-col gap-6 mt-10 md:mt-20 md:ml-44 group">
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto md:ml-0 md:group-hover:rotate-0 md:-rotate-12 md:group-hover:-ml-20"
-                src={require("../images/jdih/1.png")}
-                width={300}
-                height={100}
+                src="images/jdih/1.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="JDIH Sumedang"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all mr-auto -mt-20 md:group-hover:-mt-44 md:group-hover:rotate-0 md:ml-40 md:rotate-12 md:-mt-32"
-                src={require("../images/jdih/2.png")}
-                width={300}
-                height={100}
+                src="images/jdih/2.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="JDIH Sumedang"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto -mt-20 md:group-hover:-mt-52 md:group-hover:rotate-0 md:rotate-12 md:ml-80 md:-mt-72"
-                src={require("../images/jdih/3.png")}
-                width={300}
-                height={100}
+                src="images/jdih/3.webp"
+                width={600}
+                height={400}
+                style={{ width: 300, height: 170 }}
                 alt="JDIH Sumedang"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto -mt-40 md:-mt-32 md:ml-auto md:-rotate-12 md:group-hover:rotate-0"
-                src={require("../images/jdih/mobile-2.png")}
-                width={100}
-                height={300}
+                src="images/jdih/mobile-2.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="JDIH Sumedang"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="rounded-lg shadow-xl transition-all ml-auto mr-8 -mt-40 md:-mt-96 md:ml-auto md:-mr-20 md:rotate-12 md:group-hover:rotate-0"
-                src={require("../images/jdih/mobile-1.png")}
-                width={100}
-                height={300}
+                src="images/jdih/mobile-1.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="JDIH Sumedang"
               />
-              <Image
+              <CldImage
                 loading="lazy"
                 className="md:hidden rounded-lg shadow-xl transition-all ml-auto mr-16 -mt-40 md:-mt-96 md:ml-auto md:-mr-20 md:rotate-12 md:group-hover:rotate-0"
-                src={require("../images/jdih/mobile-3.png")}
-                width={100}
-                height={300}
+                src="images/jdih/mobile-3.webp"
+                width={400}
+                height={600}
+                style={{ width: 150, height: 300 }}
                 alt="JDIH Sumedang"
               />
             </div>
@@ -691,13 +717,14 @@ export default function Home() {
               const images = []
               for (let i = 1; i <= 7; i++) {
                 images.push(
-                  <Image
+                  <CldImage
                     loading="lazy"
                     key={i}
                     className="rounded-xl banner"
-                    src={require(`../images/jdih/mobile-${i}.png`)}
-                    width={300}
-                    height={600}
+                    src={`images/jdih/mobile-${i}.webp`}
+                    width={700}
+                    height={1000}
+                    style={{ width: 300, height: 600 }}
                     alt={`JDIH Sumedang Screenshot ${i + 1}`}
                   />
                 )
