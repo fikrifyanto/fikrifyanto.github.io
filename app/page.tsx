@@ -608,7 +608,7 @@ export default function Home() {
                 <a
                   href="https://app.waste4change.com"
                   target="_blank"
-                  className="flex justify-between items-center text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 lg:h-11 px-6 rounded-full">
+                  className="flex justify-between items-center text-white font-semibold font-gt gap-2 bg-lime-900/30 hover:bg-lime-900/50 py-2 lg:py-0 lg:h-11 px-6 rounded-full">
                   Launch
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
