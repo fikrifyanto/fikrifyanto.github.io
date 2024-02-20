@@ -1,9 +1,10 @@
 "use client"
 import { useEffect } from "react"
-import { useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
+import Link from "next/link"
 
 export default function Header() {
-  const router = useRouter()
+  const params = useParams()
 
   function showHeader() {
     const header = document.getElementById("header")
@@ -35,9 +36,7 @@ export default function Header() {
 
   function showActiveNavigationHighlight() {
     const header = document.getElementById("header")
-    const activeNavigation: HTMLElement | null = header
-      ? header.querySelector("button.active")
-      : null
+    const activeNavigation: HTMLElement | null = header ? header.querySelector("a.active") : null
     const activeNavigationRect = activeNavigation?.getBoundingClientRect()
     const activeHighlight = document.getElementById("active-highlight")
 
@@ -49,27 +48,22 @@ export default function Header() {
     }
   }
 
-  function setActive(event: React.MouseEvent<HTMLButtonElement>) {
-    const buttons = document.querySelectorAll("#header button")
+  useEffect(() => {
+    const links = document.querySelectorAll("#header a")
 
-    if (buttons) {
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active")
-      }
-    }
-
-    if (event.target) {
-      const element = event.target as HTMLElement
-      element.classList.add("active")
-
-      const route = element.getAttribute("data-route")
-      if (route) {
-        router.push(route)
+    if (links) {
+      for (var i = 0; i < links.length; i++) {
+        const route = links[i].getAttribute("href")
+        if (route == window.location.hash) {
+          links[i].classList.add("active")
+        } else {
+          links[i].classList.remove("active")
+        }
       }
     }
 
     showActiveNavigationHighlight()
-  }
+  }, [params])
 
   useEffect(() => {
     showHeader()
@@ -79,24 +73,24 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="fixed inset-x-0 top-4 md:top-10 transition duration-300 flex justify-center ease-out -translate-y-96 z-20">
+      className={`fixed inset-x-0 top-4 md:top-10 transition duration-300 flex justify-center ease-out -translate-y-96 z-20`}>
       <div className="absolute inset-0 z-20">
         <nav className="flex items-center justify-center">
           <ul className="rounded-full md:gap-4 font-gt flex items-center justify-center text-sm md:text-lg px-4 py-3 text-slate-200">
             <li>
-              <button onClick={setActive} data-route="#about" className="px-4 md:px-6 py-1 active">
+              <Link href="#about" className="px-4 md:px-6 py-1 active">
                 About
-              </button>
+              </Link>
             </li>
             <li>
-              <button onClick={setActive} data-route="#work" className="px-4 md:px-6 py-1">
+              <Link href="#work" className="px-4 md:px-6 py-1">
                 Work
-              </button>
+              </Link>
             </li>
             <li>
-              <button onClick={setActive} data-route="#contact" className="px-4 md:px-6 py-1">
+              <Link href="#contact" className="px-4 md:px-6 py-1">
                 Contact
-              </button>
+              </Link>
             </li>
           </ul>
         </nav>
